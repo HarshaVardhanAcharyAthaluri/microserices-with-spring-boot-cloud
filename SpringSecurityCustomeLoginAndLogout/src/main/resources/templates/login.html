@@ -1,0 +1,19 @@
+<h1>Welcome To Spring Secrity Enter The Credintials</h1>
+<div th:if="${param.error}" style="color: red;">
+ Invalid Username/Password
+</div>
+
+<div th:if="${param.logout}" style="color: navy;">
+ Loged Out SuccefUlly
+</div>
+
+
+<form th:action="@{/login}" method="POST">
+<div>
+	<lable>UserName: <input type="text" name="username"></lable>
+</div>
+<div>
+	<label>Password: <input type="text" name="password"></label>
+</div>
+<input type="submit">
+</form>
